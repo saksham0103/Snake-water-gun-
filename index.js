@@ -7,7 +7,7 @@ let userwins=0;
 let computerwins=0;
 while(noOfrounds!=0)
   {
-let UserChoice=prompt("Enter S for snake, W for water and G for gun")
+let UserChoice=prompt("Enter Snake, Water and Gun")
 let computerChoice=choice[Math.floor(Math.random()*3)]
 
     if(UserChoice==computerChoice)
