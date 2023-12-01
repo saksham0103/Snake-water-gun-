@@ -2,7 +2,7 @@ let noOfrounds=Number.parseInt(prompt("Enter the no of rounds you want to play")
 let rounds=isNaN(noOfrounds)
 if(!rounds)
 {
-let choice=["S","W","G"]
+let choice=["Snake","Water","Gun"]
 let userwins=0;
 let computerwins=0;
 while(noOfrounds!=0)
@@ -16,19 +16,22 @@ let computerChoice=choice[Math.floor(Math.random()*3)]
       userwins++;
       computerwins++;
       alert(`Its, tie The current score is User Wins ${userwins} and computer wins ${computerwins}`)
+      alert(`Computer chooses ${computerChoice}`)
     }
-     if(UserChoice=="S" && computerChoice=="W"||UserChoice=="W"&&computerChoice=="G"||UserChoice=="G"&&computerChoice=="S")
+     if(UserChoice=="Snake" && computerChoice=="Water"||UserChoice=="Water"&&computerChoice=="Gun"||UserChoice=="Gun"&&computerChoice=="Snake")
     {
       noOfrounds--;
       userwins++;
       alert(`You won, The current score is User Wins ${userwins} and computer wins ${computerwins}`);
+      alert(`Computer chooses ${computerChoice}`)
       
     }
-    if(UserChoice=="W" && computerChoice=="S"||UserChoice=="G"&&computerChoice=="W"||UserChoice=="S"&&computerChoice=="G")
+    if(UserChoice=="Water" && computerChoice=="Snake"||UserChoice=="Gun"&&computerChoice=="Water"||UserChoice=="Snake"&&computerChoice=="Gun")
     {
       noOfrounds--;
       computerwins++;
       alert(`You lost, Computer Wins  The current score is User Wins ${userwins} and computer wins ${computerwins}`);
+      alert(`Computer chooses ${computerChoice}`)
      
     }
   }
